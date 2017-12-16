@@ -1,0 +1,34 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "globals": {
+    "App": true,
+    "_": true,
+    "Stripe": true,
+    "braintree": true,
+    "$": true,
+    "Waveform": true,
+    "csrf_token": true,
+    "LC_API": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:import/errors", "plugin:import/warnings"],
+  "rules": {
+    "react/jsx-handler-names": "error",
+    "camelcase": 0
+    // Add more custom rules here:
+    // https://github.com/yannickcr/eslint-plugin-react
+  }
+}
