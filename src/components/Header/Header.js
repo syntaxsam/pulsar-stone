@@ -1,9 +1,8 @@
 import React from 'react';
-import Menu from './Menu'
 
 const Header = () =>
   <div>
-    <Menu />
+    Header goes here
   </div>
 
 export default Header;
