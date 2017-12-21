@@ -10,12 +10,8 @@ export const StyledLayout = glamorous.div(
 
 export const Content = glamorous.div(
   {
-    background: '#f5f3f3',
-    display: 'flex',
-    flexDirection: 'column',
     padding: '40px 60px 60px 60px',
     width: '100%',
-    height: '100vh'
   }
 )
 

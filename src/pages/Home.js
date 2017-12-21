@@ -1,12 +1,13 @@
 import React from "react";
 import Sidebar from '../components/Sidebar/Sidebar'
+import CardRow from '../components/CardRow/CardRow'
 import { StyledLayout, Content, Text } from '../components/Layout/styles/StyledLayout'
 
 const Home = () =>
   <StyledLayout>
     <Sidebar />
     <Content>
-      <h1>Home Page</h1>
+      <CardRow />
       <Text>
         Over the past 800 years, Agmar, a powerful sorcerer, has gained control
         of Jardim through violence and intimidation. Agmar’s motivation is power

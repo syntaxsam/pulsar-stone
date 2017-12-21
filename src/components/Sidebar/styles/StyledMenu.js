@@ -12,5 +12,8 @@ export const MenuItem = StyledNavLink(
     paddingBottom: '5',
     ':hover': {
       color: 'grey'
+    },
+    ':active': {
+      color: 'grey'
     }
   });
