@@ -8,7 +8,8 @@ const Home = () =>
     <Sidebar />
     <Content>
       <CardRow />
-      <Text>
+      <CardRow />
+      <Text css={{ marginTop: '30px' }}>
         Over the past 800 years, Agmar, a powerful sorcerer, has gained control
         of Jardim through violence and intimidation. Agmar’s motivation is power
         and he gains power by feeding off the suffering of others. His magic is
