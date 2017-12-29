@@ -41,7 +41,7 @@ export const StyledCardRow = glamorous.div(
   ({ isExpanded }) => ({
     minHeight: isExpanded ? "250px" : "120px",
     backgroundColor: isExpanded ? "#eee" : "transparent",
-    borderColor: isExpanded ? "#ccc" : "#fff",
+    border: isExpanded ? "1px solid #ccc" : "1px solid #fff",
     ":before": {
       backgroundColor: isExpanded ? 'purple' : "transparent",
       height: isExpanded ? "calc(100% + 1px)" : "0px",
@@ -58,7 +58,6 @@ export const Details = glamorous.div(
   {
     display: "flex",
     alignItems: "center",
-    justifyContent: "flex-start",
     height: "78px"
   }
 )
