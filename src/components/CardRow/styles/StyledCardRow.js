@@ -4,6 +4,7 @@ export const StyledCardRow = glamorous.div(
   {
     backgroundColor: "#fff",
     border: '1px solid #fff',
+    borderBottom: '1px solid #ccc',
     position: "relative",
     top: "0",
     right: "0",
@@ -39,6 +40,17 @@ export const StyledCardRow = glamorous.div(
   },
   ({ isExpanded }) => ({
     minHeight: isExpanded ? "250px" : "120px",
+    backgroundColor: isExpanded ? "#eee" : "transparent",
+    borderColor: isExpanded ? "#ccc" : "#fff",
+    ":before": {
+      backgroundColor: isExpanded ? 'purple' : "transparent",
+      height: isExpanded ? "calc(100% + 1px)" : "0px",
+      width: isExpanded ? "5px" : "0px"
+    },
+    "& .expandButton": {
+      opacity: isExpanded ? 1 : 0,
+      top: isExpanded ? 40 : 50
+    }
   }),
 )
 
@@ -46,15 +58,15 @@ export const Details = glamorous.div(
   {
     display: "flex",
     alignItems: "center",
-    justifyContent: "flex-start"
+    justifyContent: "flex-start",
+    height: "78px"
   }
 )
 
 export const CardName = glamorous.div(
   {
     fontSize: '16',
-    fontWeight: '400',
-    padding: '0px 0px 0px 30px'
+    fontWeight: '400'
   }
 )
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import autobind from "react-autobind";
 import { StyledCardRow, CardName, Details, ExpandButton, ExpandedRow, ExpandedRowDetails } from './styles/StyledCardRow'
-import AttuneWithAether from './images/attune-with-aether_thumb.png';
 
 
 class CardRow extends Component {
@@ -26,7 +25,7 @@ class CardRow extends Component {
         onClick={this.handleClick}
       >
         <Details>
-          <CardName>{this.props.name}</CardName>
+          <CardName><b>Card Name:</b> {this.props.name}</CardName>
         </Details>
         <ExpandButton className="expandButton">
           {!isExpanded ? 'Expand' : 'Expanded'}
