@@ -2,11 +2,12 @@ import glamorous from "glamorous";
 
 export const StyledSidebar = glamorous.div(
   {
-    background: '#1A1A1C',
-    padding: '40px',
-    flex: '0 0 200px',
+    padding: '40px 20px',
+    flex: '0 0 240px',
     height: '100vh'
-  }
+  }, ({ theme }) => ({
+    backgroundColor: theme.color.darkGrey
+  })
 )
 
 export const Logo = glamorous.div(
@@ -27,9 +28,12 @@ export const LogoImage = glamorous.img(
 
 export const LogoText = glamorous.div(
   {
-    color: '#fff',
     fontWeight: '700',
     textTransform: 'uppercase',
-    marginBottom: '40'
-  }
+    marginBottom: '40',
+    textAlign: 'center',
+  },
+  ({ theme }) => ({
+    color: theme.color.lightBlue
+  })
 )

@@ -9,4 +9,4 @@ const primaryTheme = {
   }
 }
 
-export default primaryTheme
+export default primaryTheme 

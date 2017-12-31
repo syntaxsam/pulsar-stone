@@ -8,12 +8,16 @@ export const MenuItem = StyledNavLink(
     color: '#fff',
     textDecoration: 'none',
     fontSize: '14',
-    paddingTop: '5',
-    paddingBottom: '5',
+    padding: '10px 20px',
+    borderBottom: '1px solid #383C3D',
+    width: '100%',
     ':hover': {
       color: 'grey'
     },
     ':active': {
       color: 'grey'
-    }
+    },
+    ':first-child': ({
+      borderTop: '1px solid #383C3D',
+    })
   });

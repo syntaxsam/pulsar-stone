@@ -16,6 +16,9 @@ export const StyledCardRow = glamorous.div(
     justifyContent: "flex-start",
     padding: "20px",
     transition: "all .1s linear",
+    ":first-child": {
+      borderTop: '1px solid #ccc',
+    },
     ":before": {
       content: `''`,
       position: "absolute",

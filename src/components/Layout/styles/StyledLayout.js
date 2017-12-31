@@ -20,3 +20,12 @@ export const Text = glamorous.p(
     lineHeight: '1.75'
   }
 )
+
+export const PageTitle = glamorous.h1(
+  {
+    fontSize: 30,
+    fontWeight: '600'
+  }, ({ theme }) => ({
+    color: theme.color.darkGrey
+  })
+)
