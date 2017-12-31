@@ -2,7 +2,7 @@ import glamorous from "glamorous";
 
 export const StyledSidebar = glamorous.div(
   {
-    background: '#2D2D2D',
+    background: '#1A1A1C',
     padding: '40px',
     flex: '0 0 200px',
     height: '100vh'
