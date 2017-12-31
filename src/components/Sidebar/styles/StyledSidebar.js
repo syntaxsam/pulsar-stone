@@ -11,7 +11,6 @@ export const StyledSidebar = glamorous.div(
 
 export const Logo = glamorous.div(
   {
-    maxWidth: 200,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -21,8 +20,7 @@ export const Logo = glamorous.div(
 
 export const LogoImage = glamorous.img(
   {
-    maxWidth: "100%",
-    width: "100",
+    width: "80px",
     height: "auto"
   }
 )
