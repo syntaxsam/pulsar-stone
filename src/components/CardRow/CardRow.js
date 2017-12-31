@@ -25,7 +25,7 @@ class CardRow extends Component {
         onClick={this.handleClick}
       >
         <Details>
-          <CardName><b>Card Name:</b> {this.props.name}</CardName>
+          <CardName>{this.props.name}</CardName>
         </Details>
         <ExpandButton className="expandButton">
           {!isExpanded ? 'Expand' : 'Expanded'}
