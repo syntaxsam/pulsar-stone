@@ -4,6 +4,8 @@ export const StyledLayout = glamorous.div(
   {
     display: 'flex',
     alignItems: 'stretch',
+    height: '100%',
+    minHeight: '100%'
   }
 )
 

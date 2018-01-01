@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  height: 100%;
+  min-height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -10,4 +12,11 @@ body {
   font-family: "proxima-nova",sans-serif;
   font-style: normal;
   font-weight: 400;
+  height: 100%;
+  min-height: 100%;
+}
+
+#root {
+  height: 100%;
+  min-height: 100%;
 }

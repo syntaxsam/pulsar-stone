@@ -7,17 +7,30 @@ export const MenuItem = StyledNavLink(
     display: 'block',
     color: '#fff',
     textDecoration: 'none',
-    fontSize: '14',
-    padding: '10px 20px',
-    borderBottom: '1px solid #383C3D',
+    fontSize: '16',
+    padding: '11px 25px',
     width: '100%',
+    position: 'relative',
+    transition: "all .2s linear",
+    '.active': {
+      ':before': {
+        content: `''`,
+        position: "absolute",
+        top: "0px",
+        left: "0px",
+        height: "calc(100% + 1px)",
+        width: "5px",
+      }
+    }
+  }, ({ theme }) => ({
     ':hover': {
-      color: 'grey'
+      backgroundColor: '#23272A'
     },
-    ':active': {
-      color: 'grey'
-    },
-    ':first-child': ({
-      borderTop: '1px solid #383C3D',
-    })
-  });
+    '.active': {
+      backgroundColor: '#23272A',
+      ':before': {
+        backgroundColor: theme.color.blue,
+      }
+    }
+  })
+)

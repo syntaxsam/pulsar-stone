@@ -28,25 +28,30 @@ export const StyledCardRow = glamorous.div(
       transition: "all .1s linear"
     },
     ":hover": {
-      backgroundColor: "#eee",
       border: '1px solid #ccc',
       ":before": {
         backgroundColor: 'purple',
         height: "calc(100% + 1px)",
-        width: "5px"
+        width: "5px",
       },
       "& .expandButton": {
         opacity: 1,
         top: 40
       }
     }
-  },
-  ({ isExpanded }) => ({
+  }, ({ theme }) => ({
+    ":hover": {
+      ":before": {
+        backgroundColor: theme.color.blueTwo,
+      }
+    }
+  }),
+  ({ isExpanded, theme }) => ({
     minHeight: isExpanded ? "250px" : "120px",
     backgroundColor: isExpanded ? "#eee" : "transparent",
     border: isExpanded ? "1px solid #ccc" : "1px solid #fff",
     ":before": {
-      backgroundColor: isExpanded ? 'purple' : "transparent",
+      backgroundColor: isExpanded ? theme.color.blueTwo : "transparent",
       height: isExpanded ? "calc(100% + 1px)" : "0px",
       width: isExpanded ? "5px" : "0px"
     },
@@ -54,7 +59,7 @@ export const StyledCardRow = glamorous.div(
       opacity: isExpanded ? 1 : 0,
       top: isExpanded ? 40 : 50
     }
-  }),
+  })
 )
 
 export const Details = glamorous.div(
@@ -77,17 +82,18 @@ export const ExpandButton = glamorous.div(
     position: 'absolute',
     right: "20px",
     transition: 'all .3s linear',
-    backgroundColor: "purple",
     color: 'white',
     padding: '10px 30px',
     borderRadius: 4,
     cursor: 'pointer',
     opacity: '0',
     top: 50,
+  }, ({ theme }) => ({
+    backgroundColor: theme.color.blueTwo,
     ":hover": {
-      backgroundColor: "black"
+      backgroundColor: theme.color.blueThree,
     }
-  }
+  })
 )
 
 export const ExpandedRow = glamorous.div(
@@ -98,21 +104,22 @@ export const ExpandedRow = glamorous.div(
     flex: "0 0 100%",
     width: "100%",
     position: "relative",
-    height: 0
+    height: 0,
   },
   ({ isExpanded }) => ({
     opacity: isExpanded ? "1" : "0",
-    height: isExpanded ? 'auto' : "0"
+    height: isExpanded ? 'auto' : "0",
   })
 )
 
 export const ExpandedRowDetails = glamorous.div(
   {
-    padding: "0px"
+    padding: "0px",
+    opacity: '0',
   },
   ({ isExpanded }) => ({
     opacity: isExpanded ? "0" : "1",
-    padding: '40px 0px 20px 0px'
+    padding: '40px 0px 20px 0px',
   })
 )
 
