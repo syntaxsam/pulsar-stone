@@ -8,21 +8,15 @@ class CardRow extends Component {
   constructor(props) {
     super(props);
     autobind(this);
-    this.state = {
-      isExpanded: false
-    }
-  }
-
-  handleClick() {
-    this.setState({ isExpanded: !this.state.isExpanded })
   }
 
   render() {
-    const { isExpanded } = this.state;
+    const { isExpanded, onClick } = this.props;
     return (
       <StyledCardRow
+        {...this.props}
         isExpanded={isExpanded}
-        onClick={this.handleClick}
+        onClick={onClick}
       >
         <Details>
           <CardName>{this.props.name}</CardName>
@@ -43,7 +37,6 @@ class CardRow extends Component {
 }
 
 CardRow.propTypes = {
-  id: PropTypes.number,
   name: PropTypes.string,
   imageUrl: PropTypes.string
 }
